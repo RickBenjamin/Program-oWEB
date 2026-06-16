@@ -262,10 +262,10 @@ export default function Home() {
         <section className="carousel">
 
           <div className="carousel-content">
-
+            {/*ciente 01*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                🥖
+                
               </div>
 
               <span className="testimony">
@@ -283,10 +283,10 @@ export default function Home() {
                 <p>Cliente</p>
               </span>
             </div>
-
+            {/*ciente 02*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                🍰
+                
               </div>
 
               <span className="testimony">
@@ -304,10 +304,10 @@ export default function Home() {
                 <p>Cliente</p>
               </span>
             </div>
-
+            {/*ciente 03*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                ☕
+            
               </div>
 
               <span className="testimony">
@@ -325,10 +325,9 @@ export default function Home() {
                 <p>Cliente</p>
               </span>
             </div>
-
+            {/*ciente 04*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                🥖
               </div>
 
               <span className="testimony">
@@ -346,10 +345,10 @@ export default function Home() {
                 <p>Cliente</p>
               </span>
             </div>
-
+            {/*ciente 05*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                ☕
+                
               </div>
 
               <span className="testimony">
@@ -367,10 +366,10 @@ export default function Home() {
                 <p>Cliente</p>
               </span>
             </div>
-
+            {/*ciente 06*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                🍰
+                
               </div>
 
               <span className="testimony">
@@ -388,10 +387,10 @@ export default function Home() {
                 <p>Cliente</p>
               </span>
             </div>
-
+            {/*ciente 08*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                🧀
+                
               </div>
 
               <span className="testimony">
@@ -409,10 +408,9 @@ export default function Home() {
                 <p>Cliente</p>
               </span>
             </div>
-
+            {/*ciente 09*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                🎂
               </div>
 
               <span className="testimony">
@@ -430,10 +428,9 @@ export default function Home() {
                 <p>Cliente</p>
               </span>
             </div>
-
+            {/*ciente 10*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                😊
               </div>
 
               <span className="testimony">
@@ -451,10 +448,10 @@ export default function Home() {
                 <p>Cliente</p>
               </span>
             </div>
-
+            {/*ciente 11*/}
             <div className="carousel-card">
               <div className="profile-placeholder">
-                🥐
+                
               </div>
 
               <span className="testimony">
@@ -543,6 +540,30 @@ export default function Home() {
             </div>
 
           </section>
+        </div>
+      </section>
+
+      <section id="contato" className="container">
+        <header className="contact-header">
+          <p className="desktop-only">Envie sua dúvida</p>
+          <h2>Entre em contato</h2>
+          <p>
+            Tem alguma dúvida sobre nossos produtos ou quer fazer um pedido especial?
+            Manda uma mensagem que respondemos rapidinho! 🍞
+          </p>
+        </header>
+
+        <div className="contact-form">
+          <input
+            type="email"
+            placeholder="Seu melhor e-mail"
+            className="contact-input"
+          />
+          <textarea
+            placeholder="Motivo do contato. Ex: Gostaria de encomendar um bolo de aniversário..."
+            className="contact-input contact-textarea"
+          />
+          <Button text="Enviar" />
         </div>
       </section>
 
