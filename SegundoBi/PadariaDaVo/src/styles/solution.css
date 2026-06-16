@@ -23,7 +23,13 @@
 
 #solution .even-columns {
     gap: 2rem;
-     grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+}
+
+@media (width >= 1280px) {
+    #solution .even-columns {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .card {
