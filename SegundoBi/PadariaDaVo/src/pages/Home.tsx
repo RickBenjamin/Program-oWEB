@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 import Button from "../components/Button";
+import Card from "../components/Card";
+import TestimonialCard from "../components/TestimonialCard";
 
 import "../styles/header.css";
 import "../styles/utility.css";
@@ -198,43 +200,24 @@ export default function Home() {
         </header>
 
         <div className="even-columns">
-
-          <div className="card">
-            <span>
-              <img src={PaoFrances} alt="Pão Francês" width={120} />
-            </span>
-            <div>
-              <h3>Pão Francês</h3>
-              <p>Crocante por fora, macio por dentro e sempre fresquinho.
-                O clássico que não pode faltar na mesa dos brasileiros.</p>
-              <hr />
-            </div>
-          </div>
-
-          <div className="card">
-            <span>
-              <img src={PaoDeQueijo} alt="Pão de Queijo" width={120} />
-            </span>
-            <div>
-              <h3>Pão de Queijo</h3>
-              <p>Receita tradicional com muito queijo,
-                perfeita para acompanhar um café quentinho.</p>
-              <hr />
-            </div>
-          </div>
-
-          <div className="card">
-            <span>
-              <img src={Bolos} alt="Bolos Caseiros" width={120} />
-            </span>
-            <div>
-              <h3>Bolos Caseiros</h3>
-              <p>Diversos sabores preparados diariamente,
-                trazendo o gostinho de receita feita em casa.</p>
-              <hr />
-            </div>
-          </div>
-
+          <Card
+            image={PaoFrances}
+            alt="Pão Francês"
+            title="Pão Francês"
+            description="Crocante por fora, macio por dentro e sempre fresquinho. O clássico que não pode faltar na mesa dos brasileiros."
+          />
+          <Card
+            image={PaoDeQueijo}
+            alt="Pão de Queijo"
+            title="Pão de Queijo"
+            description="Receita tradicional com muito queijo, perfeita para acompanhar um café quentinho."
+          />
+          <Card
+            image={Bolos}
+            alt="Bolos Caseiros"
+            title="Bolos Caseiros"
+            description="Diversos sabores preparados diariamente, trazendo o gostinho de receita feita em casa."
+          />
         </div>
 
       </section>
@@ -262,214 +245,16 @@ export default function Home() {
         <section className="carousel">
 
           <div className="carousel-content">
-            {/*ciente 01*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-                
-              </div>
-
-              <span className="testimony">
-                <p>
-                  O pão francês é sempre fresquinho e crocante.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>Ana Souza</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-            {/*ciente 02*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-                
-              </div>
-
-              <span className="testimony">
-                <p>
-                  Os bolos são deliciosos e lembram receitas de família.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>Marcos Oliveira</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-            {/*ciente 03*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-            
-              </div>
-
-              <span className="testimony">
-                <p>
-                  Melhor café da manhã da cidade.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>Juliana Costa</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-            {/*ciente 04*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-              </div>
-
-              <span className="testimony">
-                <p>
-                  O pão francês é sempre fresquinho e crocante. Não consigo começar o dia sem passar aqui.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>Maria Oliveira</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-            {/*ciente 05*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-                
-              </div>
-
-              <span className="testimony">
-                <p>
-                  O café é delicioso e combina perfeitamente com os pães de queijo da casa.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>João Ferreira</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-            {/*ciente 06*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-                
-              </div>
-
-              <span className="testimony">
-                <p>
-                  Os bolos caseiros são incríveis. O de cenoura com chocolate é o meu favorito.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>Ana Clara</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-            {/*ciente 08*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-                
-              </div>
-
-              <span className="testimony">
-                <p>
-                  Melhor pão de queijo da região. Sempre quentinho e com bastante sabor.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>Carlos Mendes</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-            {/*ciente 09*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-              </div>
-
-              <span className="testimony">
-                <p>
-                  Encomendei um bolo de aniversário e ficou perfeito. Todos os convidados elogiaram.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>Fernanda Rocha</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-            {/*ciente 10*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-              </div>
-
-              <span className="testimony">
-                <p>
-                  Atendimento excelente e ambiente muito acolhedor. Parece que estamos em casa.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>Ricardo Martins</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-            {/*ciente 11*/}
-            <div className="carousel-card">
-              <div className="profile-placeholder">
-                
-              </div>
-
-              <span className="testimony">
-                <p>
-                  Os salgados são sempre frescos e saborosos. Ótima opção para o lanche da tarde.
-                </p>
-              </span>
-
-              <span className="rating">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="names">
-                <p>Patrícia Gomes</p>
-                <p>Cliente</p>
-              </span>
-            </div>
-
+            <TestimonialCard testimony="O pão francês é sempre fresquinho e crocante. Já virou tradição comprar aqui toda manhã." rating={5} name="Ana Souza" role="Cliente" />
+            <TestimonialCard  testimony="Os bolos são deliciosos e lembram receitas de família." rating={5} name="Marcos Oliveira" role="Cliente" />
+            <TestimonialCard  testimony="Melhor café da manhã da cidade." rating={5} name="Juliana Costa" role="Cliente" />
+            <TestimonialCard  testimony="O pão francês é sempre fresquinho e crocante. Não consigo começar o dia sem passar aqui." rating={5} name="Maria Oliveira" role="Cliente" />
+            <TestimonialCard  testimony="O café é delicioso e combina perfeitamente com os pães de queijo da casa." rating={5} name="João Ferreira" role="Cliente" />
+            <TestimonialCard  testimony="Os bolos caseiros são incríveis. O de cenoura com chocolate é o meu favorito." rating={5} name="Ana Clara" role="Cliente" />
+            <TestimonialCard  testimony="Melhor pão de queijo da região. Sempre quentinho e com bastante sabor." rating={5} name="Carlos Mendes" role="Cliente" />
+            <TestimonialCard  testimony="Encomendei um bolo de aniversário e ficou perfeito. Todos os convidados elogiaram." rating={5} name="Fernanda Rocha" role="Cliente" />
+            <TestimonialCard  testimony="Atendimento excelente e ambiente muito acolhedor. Parece que estamos em casa." rating={5} name="Ricardo Martins" role="Cliente" />
+            <TestimonialCard  testimony="Os salgados são sempre frescos e saborosos. Ótima opção para o lanche da tarde." rating={5} name="Patrícia Gomes" role="Cliente" />
           </div>
 
         </section>
@@ -500,7 +285,7 @@ export default function Home() {
               <Button text="Pedir agora" secondary />
               <span className="hr"></span>
               <div className="features">✔ Café fresco.</div>
-              <div className="features">✔ 2 Pães Franceses.</div>
+              <div className="features">✔ 6 Pães Franceses.</div>
               <div className="features">✔ Manteiga ou Requijão.</div>
             </div>
 
