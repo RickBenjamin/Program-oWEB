@@ -20,6 +20,35 @@ import Bolos from "../assets/bolos.jpeg";
 export default function Home() {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function sendContactEmail() {
+    setStatus("sending");
+    setErrorMsg("");
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, message }),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body.error ?? "Erro ao enviar mensagem.");
+      }
+
+      setStatus("success");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      setStatus("error");
+      setErrorMsg(error instanceof Error ? error.message : "Erro ao enviar mensagem.");
+    }
+  }
 
   useEffect(() => {
 
@@ -343,12 +372,27 @@ export default function Home() {
             type="email"
             placeholder="Seu melhor e-mail"
             className="contact-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
             placeholder="Motivo do contato. Ex: Gostaria de encomendar um bolo de aniversário..."
             className="contact-input contact-textarea"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           />
-          <Button text="Enviar" />
+
+          <span onClick={sendContactEmail}>
+            <Button text={status === "sending" ? "Enviando..." : "Enviar"} />
+          </span>
+
+          {status === "success" && (
+            <p style={{ color: "green" }}>Mensagem enviada com sucesso! 🍞</p>
+          )}
+
+          {status === "error" && (
+            <p style={{ color: "red" }}>{errorMsg}</p>
+          )}
         </div>
       </section>
 
